@@ -4,13 +4,14 @@ import lombok.Data;
 import java.util.Arrays;
 import java.util.Date;
 
+
 @Data
 public class NoteBook {
 
     private String noteBookName;
-    private Note[] notes = {new Note("Note1", new Date())
-        ,new Note("Note2", new Date())
-        ,new Note("Note3", new Date())};
+    private Note[] notes = {new Note("Note1", new Date(), NoteType.NOTE)
+        ,new Note("Note2", new Date(), NoteType.TASK)
+        ,new Note("Note3", new Date(), NoteType.NOTE)};
 
     public NoteBook(String noteBookName) {
         this.noteBookName = noteBookName;

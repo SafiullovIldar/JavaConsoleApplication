@@ -3,11 +3,8 @@ package com.javacourse.view;
 import com.javacourse.entity.Note;
 import com.javacourse.entity.NoteBook;
 
-public class NoteBookConsoleView {
 
-    public void print(Note note) {
-        System.out.println(note.toString());
-    }
+public class NoteBookConsoleView {
 
     public void print(Note...notes) {
         for (Note note : notes) {
