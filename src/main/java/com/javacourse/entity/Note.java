@@ -1,7 +1,6 @@
 package com.javacourse.entity;
 
 import lombok.Data;
-
 import java.util.Date;
 
 

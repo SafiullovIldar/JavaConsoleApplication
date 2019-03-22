@@ -3,17 +3,20 @@ package com.javacourse.provider.impl;
 import com.javacourse.entity.Note;
 import com.javacourse.entity.NoteBook;
 import com.javacourse.provider.NoteBookProvider;
+import com.javacourse.util.CrazyLogger;
+
 import java.util.Random;
 
 
 public class InMemoryNoteBookProvider implements NoteBookProvider {
 
     private static InMemoryNoteBookProvider instance;
-
     private NoteBook[] noteBooks;
+    private CrazyLogger logger = new CrazyLogger();
 
     {
         noteBooks = new NoteBook[]{new NoteBook("NoteBook1"), new NoteBook("NoteBook2")};
+        logger.addMessageToLogger("Initialised a noteBooks massive");
     }
 
     private InMemoryNoteBookProvider() {
