@@ -12,7 +12,7 @@ public class InMemoryNoteBookProvider implements NoteBookProvider {
 
     private static InMemoryNoteBookProvider instance;
     private NoteBook[] noteBooks;
-    private CrazyLogger logger = new CrazyLogger();
+    private CrazyLogger logger = CrazyLogger.getInstance();
 
     {
         noteBooks = new NoteBook[]{new NoteBook("NoteBook1"), new NoteBook("NoteBook2")};

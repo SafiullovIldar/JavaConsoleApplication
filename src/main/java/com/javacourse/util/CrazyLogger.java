@@ -7,6 +7,17 @@ public class CrazyLogger {
 
     private StringBuilder logger = new StringBuilder();
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-YYYY : hh-mm - ");
+    private static CrazyLogger instance;
+
+    private CrazyLogger() {
+    }
+
+    public static CrazyLogger getInstance(){
+        if (instance == null){
+            instance = new CrazyLogger();
+        }
+        return instance;
+    }
 
     public void addMessageToLogger(String message){
         logger.append(getFormatDateTime())
